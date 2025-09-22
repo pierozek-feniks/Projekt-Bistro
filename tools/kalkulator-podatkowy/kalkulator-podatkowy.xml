@@ -5,226 +5,115 @@
  xmlns:x="urn:schemas-microsoft-com:office:excel"
  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
  xmlns:html="http://www.w3.org/TR/REC-html40">
-  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
-    <Author>Copilot</Author>
-    <LastAuthor>Copilot</LastAuthor>
-    <Created>2025-09-22T12:10:00Z</Created>
-    <Version>16.00</Version>
-  </DocumentProperties>
-  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-    <WindowHeight>8130</WindowHeight>
-    <WindowWidth>15195</WindowWidth>
-    <WindowTopX>120</WindowTopX>
-    <WindowTopY>45</WindowTopY>
-    <ProtectStructure>False</ProtectStructure>
-    <ProtectWindows>False</ProtectWindows>
-  </ExcelWorkbook>
-  <Styles>
-    <Style ss:ID="Default" ss:Name="Normal">
-      <Alignment ss:Vertical="Bottom"/>
-      <Borders/>
-      <Font/>
-      <Interior/>
-      <NumberFormat/>
-      <Protection/>
-    </Style>
-    <Style ss:ID="sHdr">
-      <Font ss:Bold="1"/>
-    </Style>
-    <Style ss:ID="sPct">
-      <NumberFormat ss:Format="0%"/>
-    </Style>
-    <Style ss:ID="sCur">
-      <NumberFormat ss:Format="#\,##0.00"/>
-    </Style>
-  </Styles>
-  <Worksheet ss:Name="Wejsciowe">
-    <Table>
-      <Row>
-        <Cell ss:StyleID="sHdr"><Data ss:Type="String">Kalkulator podatkowy (JDG vs Sp. z o.o.)</Data></Cell>
-      </Row>
-      <Row/>
-      <Row>
-        <Cell><Data ss:Type="String">Przychód roczny netto</Data></Cell>
-        <Cell ss:StyleID="sCur"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Koszty operacyjne netto</Data></Cell>
-        <Cell ss:StyleID="sCur"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Wypłata zysku w sp. z o.o. (%)</Data></Cell>
-        <Cell ss:StyleID="sPct"><Data ss:Type="Number">1</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Amortyzacja - bieżąca</Data></Cell>
-        <Cell ss:StyleID="sCur"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Amortyzacja - sprzęt (jednorazowa)</Data></Cell>
-        <Cell ss:StyleID="sCur"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Amortyzacja - adaptacja (10% rocznie)</Data></Cell>
-        <Cell ss:StyleID="sCur"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Czynsz najmu (z ryczałtem rodziców)</Data></Cell>
-        <Cell ss:StyleID="sCur"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">ZUS miesięcznie</Data></Cell>
-        <Cell ss:StyleID="sCur"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Księgowość miesięcznie</Data></Cell>
-        <Cell ss:StyleID="sCur"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row/>
-      <Row>
-        <Cell><Data ss:Type="String">Stawka ryczałtu JDG</Data></Cell>
-        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.03</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">CIT (mały podatnik)</Data></Cell>
-        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.09</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">PIT od dywidendy</Data></Cell>
-        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.19</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Estoński CIT od wypłat</Data></Cell>
-        <Cell ss:StyleID="sPct"><Data ss:Type="Number">0.2</Data></Cell>
-      </Row>
-      <Row/>
-      <Row>
-        <Cell><Data ss:Type="String">ZUS rocznie</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=B10*12"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Księgowość rocznie</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=B11*12"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Koszty łącznie (operacyjne + amortyzacje + czynsz + ZUS + księgowość)</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=B4+B6+B7+B8+B9+B18+B19"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-    </Table>
-    <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
-      <Selected/>
-      <Panes>
-        <Pane>
-          <Number>3</Number>
-          <ActiveRow>2</ActiveRow>
-          <ActiveCol>1</ActiveCol>
-        </Pane>
-      </Panes>
-      <ProtectObjects>False</ProtectObjects>
-      <ProtectScenarios>False</ProtectScenarios>
-    </WorksheetOptions>
-  </Worksheet>
-  <Worksheet ss:Name="Wyniki">
-    <Table>
-      <Row>
-        <Cell ss:StyleID="sHdr"><Data ss:Type="String">JDG (ryczałt 3%)</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Podatek ryczałt</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=Wejsciowe!B3*Wejsciowe!B13"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Wypływy pozapodatkowe (koszty + ZUS + księgowość)</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=Wejsciowe!B4+Wejsciowe!B6+Wejsciowe!B7+Wejsciowe!B8+Wejsciowe!B9+Wejsciowe!B18+Wejsciowe!B19"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Netto w kieszeni</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=Wejsciowe!B3 - R[-2]C - R[-1]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row/>
-      <Row>
-        <Cell ss:StyleID="sHdr"><Data ss:Type="String">Sp. z o.o. (CIT 9% + PIT od dywidendy)</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Zysk przed podatkiem (przychód - koszty)</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=Wejsciowe!B3-(Wejsciowe!B4+Wejsciowe!B6+Wejsciowe!B7+Wejsciowe!B8+Wejsciowe!B9+Wejsciowe!B18+Wejsciowe!B19)"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">CIT (9%)</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=MAX(0,R[-1]C*Wejsciowe!B14)"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Zysk po CIT</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Wypłata dywidendy (%)</Data></Cell>
-        <Cell ss:StyleID="sPct" ss:Formula="=Wejsciowe!B5"><Data ss:Type="Number">1</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Kwota dywidendy</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-2]C*R[-1]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">PIT od dywidendy</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-1]C*Wejsciowe!B15"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Netto w kieszeni</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Środki zatrzymane w spółce</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-5]C-R[-2]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Podatki razem (CIT + PIT)</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-8]C+R[-2]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row/>
-      <Row>
-        <Cell ss:StyleID="sHdr"><Data ss:Type="String">Sp. z o.o. (estoński CIT)</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Zysk brutto (jak wyżej)</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-13]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Wypłata zysku (%)</Data></Cell>
-        <Cell ss:StyleID="sPct" ss:Formula="=Wejsciowe!B5"><Data ss:Type="Number">1</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Kwota wypłaty</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-2]C*R[-1]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Estoński CIT od wypłaty</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-1]C*Wejsciowe!B16"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Netto w kieszeni</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-2]C-R[-1]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Zatrzymane w spółce</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-5]C-R[-3]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-      <Row>
-        <Cell><Data ss:Type="String">Podatki razem</Data></Cell>
-        <Cell ss:StyleID="sCur" ss:Formula="=R[-2]C"><Data ss:Type="Number">0</Data></Cell>
-      </Row>
-    </Table>
-    <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
-      <Selected/>
-      <Panes>
-        <Pane>
-          <Number>3</Number>
-          <ActiveRow>1</ActiveRow>
-          <ActiveCol>1</ActiveCol>
-        </Pane>
-      </Panes>
-      <ProtectObjects>False</ProtectObjects>
-      <ProtectScenarios>False</ProtectScenarios>
-    </WorksheetOptions>
-  </Worksheet>
+
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Title>Kalkulator Podatkowy</Title>
+  <Author>GitHub Copilot</Author>
+  <LastAuthor>GitHub Copilot</LastAuthor>
+  <Created>2025-09-22T12:15:57Z</Created>
+  <Company>Projekt-Bistro</Company>
+  <Version>16.00</Version>
+ </DocumentProperties>
+
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="sHeader">
+   <Font ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="sCurrency">
+   <NumberFormat ss:Format="#,##0.00;[Red]-#,##0.00"/>
+  </Style>
+  <Style ss:ID="sPercent">
+   <NumberFormat ss:Format="0%"/>
+  </Style>
+  <Style ss:ID="sNumber2">
+   <NumberFormat ss:Format="0.00"/>
+  </Style>
+ </Styles>
+
+ <Worksheet ss:Name="VAT">
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="6" x:FullColumns="1" x:FullRows="1">
+   <Row>
+    <Cell ss:StyleID="sHeader"><Data ss:Type="String">Opis</Data></Cell>
+    <Cell ss:StyleID="sHeader"><Data ss:Type="String">Wartość</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Netto (PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Stawka VAT</Data></Cell>
+    <Cell ss:StyleID="sPercent"><Data ss:Type="Number">0.23</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Kwota VAT (PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency" ss:Formula="=R[-2]C*R[-1]C"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Brutto (PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency" ss:Formula="=R[-3]C+R[-1]C"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Uwaga: Podaj kwotę netto i stawkę VAT (np. 0.23 = 23%).</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <Worksheet ss:Name="PIT (uproszczony)">
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="9" x:FullColumns="1" x:FullRows="1">
+   <Row>
+    <Cell ss:StyleID="sHeader"><Data ss:Type="String">Opis</Data></Cell>
+    <Cell ss:StyleID="sHeader"><Data ss:Type="String">Wartość</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Dochód roczny (PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Kwota wolna (PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency"><Data ss:Type="Number">30000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Podstawa opodatkowania (PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency" ss:Formula="=MAX(R[-2]C-R[-1]C,0)"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Kwota w progu 12% (do 120000 PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency" ss:Formula="=MIN(R[-1]C,120000)"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Kwota w progu 32% (powyżej 120000 PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency" ss:Formula="=MAX(R[-2]C-120000,0)"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Podatek roczny (PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency" ss:Formula="=R[-2]C*0.12+R[-1]C*0.32"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Zaliczka miesięczna (PLN)</Data></Cell>
+    <Cell ss:StyleID="sCurrency" ss:Formula="=R[-1]C/12"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="1"><Data ss:Type="String">Uwaga: Model uproszczony (bez ZUS/ulgi/odliczeń). Progi przyjęte: 12% do 120 000 PLN, 32% powyżej.</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <Worksheet ss:Name="Instrukcja">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="6" x:FullColumns="1" x:FullRows="1">
+   <Row><Cell><Data ss:Type="String">Kalkulator VAT: wprowadź kwotę netto i stawkę VAT (np. 0.23 = 23%).</Data></Cell></Row>
+   <Row><Cell><Data ss:Type="String">Kalkulator PIT: wprowadź dochód roczny i (opcjonalnie) kwotę wolną.</Data></Cell></Row>
+   <Row><Cell><Data ss:Type="String">Formuły są w komórkach: VAT (B4, B5), PIT (B4-B8).</Data></Cell></Row>
+   <Row><Cell><Data ss:Type="String">Ten plik to format Excel XML (SpreadsheetML) — można go otworzyć bezpośrednio w Excelu.</Data></Cell></Row>
+   <Row><Cell><Data ss:Type="String">Jeśli chcesz wersję .xlsx, daj znać — przygotuję i dodam obok.</Data></Cell></Row>
+  </Table>
+ </Worksheet>
+
 </Workbook>
